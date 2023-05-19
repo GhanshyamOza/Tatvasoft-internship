@@ -1,0 +1,6 @@
+/* using module to add styling */
+.navbarStyle{
+    padding: 10px;
+    display: flex;
+    column-gap: 20px;
+}
