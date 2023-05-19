@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+/* using className to add styling */
+.navbar-style{
+  padding: 10px;
+  display: flex;
+  column-gap: 20px;
+}

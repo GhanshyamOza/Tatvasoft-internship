@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+  // import logo from './logo.svg';
 import './App.css';
+import {Routes, Route, Link, BrowserRouter} from 'react-router-dom';
+import {HomePage} from './HomePage';
+import {Apple} from './Apple';
+import {NotFound} from './NoFound';
+// import {globalStyle} from './constants';
+import appStyle from './AppStyle.module.css';
+// import Logo from './images/logo.svg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <img src={`${process.env.REACT_APP_HOSTED_URL}logo192.png`} alt="App Logo" />
+      <div 
+        // style={{
+        //   ...globalStyle.navbar
+        // }}
+        className={appStyle.navbarStyle}
+      >
+        <Link to='/'>Home</Link>
+        <Link to='/apple'>Apple</Link>
+        <Link to='/applet'>Applet</Link>
+      </div>
+
+      <Routes>
+        <Route path='/' element={<HomePage/>}></Route>
+        <Route path='/apple' element={<Apple/>}></Route>
+        <Route path='*' element={<NotFound/>}></Route> 
+      </Routes>
+    </BrowserRouter>
   );
 }
 
