@@ -6,30 +6,34 @@ import {Apple} from './Apple';
 import {NotFound} from './NoFound';
 // import {globalStyle} from './constants';
 import appStyle from './AppStyle.module.css';
+import { ThemeProvider } from '@emotion/react';
 // import Logo from './images/logo.svg'
+import { theme } from './styles';
 
-function App() {
-  return (
-    <BrowserRouter>
-      <img src={`${process.env.REACT_APP_HOSTED_URL}logo192.png`} alt="App Logo" />
-      <div 
-        // style={{
-        //   ...globalStyle.navbar
-        // }}
-        className={appStyle.navbarStyle}
-      >
-        <Link to='/'>Home</Link>
-        <Link to='/apple'>Apple</Link>
-        <Link to='/applet'>Applet</Link>
-      </div>
+const App = () => {
+  return (<>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <img src={`${process.env.REACT_APP_HOSTED_URL}logo192.png`} alt="App Logo" />
+        <div 
+          // style={{
+          //   ...globalStyle.navbar
+          // }}
+          className={appStyle.navbarStyle}
+        >
+          <Link to='/'>Home</Link>
+          <Link to='/apple'>Apple</Link>
+          <Link to='/applet'>Applet</Link>
+        </div>
 
-      <Routes>
-        <Route path='/' element={<HomePage/>}></Route>
-        <Route path='/apple' element={<Apple/>}></Route>
-        <Route path='*' element={<NotFound/>}></Route> 
-      </Routes>
-    </BrowserRouter>
-  );
+        <Routes>
+          <Route path='/' element={<HomePage/>}></Route>
+          <Route path='/apple' element={<Apple/>}></Route>
+          <Route path='*' element={<NotFound/>}></Route> 
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
+  </>);
 }
 
 export default App;

@@ -1,4 +1,5 @@
 import {useNavigate} from 'react-router-dom';
+import Button from '@mui/material/Button'
 
 export const Apple = () => {
     const Navigate = useNavigate();
@@ -11,7 +12,7 @@ export const Apple = () => {
     return(
         <div>
             <div style={{margin: "20px", fontSize: "26px"}}>Apple Page 🍎</div>
-            <button style={{margin: "20px", fontSize: "26px"}} onClick={onHomePageClickListner}>Home Page</button>
+            <Button variant="contained" onClick={onHomePageClickListner}>Home Page</Button>
         </div>
     )
 }
