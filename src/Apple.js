@@ -3,11 +3,12 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import TextField from '@mui/material/TextField';
 import { Avatar, Popover } from '@mui/material';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 export const Apple = () => {
     const Navigate = useNavigate();
-    const [name, setName] = useState('Gansu');
-    const [email, setEmail] = useState('Gansu@gmail.com');
+    const [name, setName] = useState('Ghanshyam Oza');
+    const [email, setEmail] = useState('Gmo@test.com');
     const [open, setOpen] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -29,10 +30,9 @@ export const Apple = () => {
     return(
         <div style={{padding: 5}}>
             {/* <div style={{margin: "20px", fontSize: "26px"}}>Apple Page 🍎</div> */}
-            <div style={{display: "flex", justifyContent: "flex-end", alignItems: "center", columnGap: 5}}>
-                <div onClick={handleClick} style={{display: "flex", justifyContent: "flex-end", alignItems: "center", columnGap: 5}}>
+            <div style={{display: "flex", justifyContent: "flex-end", alignItems: "center", columnGap: 5}} >
+                <div onClick={handleClick} style={{display: "flex", justifyContent: "flex-end", alignItems: "center", columnGap: 5, cursor: "pointer"}}>
                     <Avatar sx={{ bgcolor: "blue" }}>GO</Avatar>
-                    <span>Ghanshyam Oza</span>
                 </div>
             </div>
             <div style={{padding: 5, display: "flex", flexDirection: "column", rowGap: 10}}>
@@ -58,7 +58,11 @@ export const Apple = () => {
                 horizontal: 'left',
             }}
             >
-            The content of the Popover.
+                <div style={{padding: 5}}>
+                    <div style={{margin: 8, fontWeight: 500}}>Ghanshyam Oza</div>
+                    <LogoutIcon style={{cursor: "pointer", marginLeft: 8, marginBottom: 3}} onClick={onHomePageClickListner}/>
+                </div>
+                {/* <Button style={{padding: 10, cursor: "pointer"}} variant="contained" onClick={onHomePageClickListner}>Logout <LogoutIcon/></Button> */}
             </Popover>
 
         </div>
