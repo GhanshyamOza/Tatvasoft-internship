@@ -1,0 +1,66 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.top-header{
+    padding: 6px 0;
+    background-color: #f14d54;
+}
+.bottom-header{
+    margin: 0 auto;
+    width: 75%;
+    height: 92px;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+.header-wrapper{
+    display: flex;
+}
+/* tatvasoft logo styling */
+img{
+    height: 43px;
+}
+.nav-wrapper{
+    display: flex;
+    align-items: center;
+}
+.cart{
+    display: flex;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    padding: 5px 13px;  
+    cursor: pointer;
+    margin-left: 22px
+}
+ul{
+    list-style-type: none;
+}
+.search-bar{
+    height: 70px;   
+    background-color: #f4f4f4;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#login{
+    margin-right: 16px;
+    color: #f14d54;
+    text-decoration: none;
+}
+#register{
+    margin-left: 16px;
+    color: #f14d54;
+    text-decoration: none;
+}
+#search-bar-input{
+    height: 7px;
+    width: 550px;
+    font-size: 18px;
+    background-color: #ffffff;
+}
+#search-button{
+    margin-left: 16px;
+    background-color: #80bf32;
+}
